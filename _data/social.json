@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Github",
+    "link": "https://github.com/cake-tech",
+    "image": "images/social/github.svg"
+  },
+  {
+    "name": "Twitter",
+    "link": "https://twitter.com/cakewallet",
+    "image": "images/social/twitter.svg"
+  },
+  {
+    "name": "Discord",
+    "link": "https://discord.gg",
+    "image": "images/social/discord.svg"
+  }
+]

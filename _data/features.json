@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Trade Without Counterparties",
+    "description": "Instantly trade using liquidity pools with tokens like XMR, BTC, DAI.",
+    "image": {
+      "url": "images/features/noun_branding_1885335.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Risk Mitigated",
+    "description": "Network funds are exclusively held in multisig wallets.",
+    "image": {
+      "url": "images/features/noun_The Process_1885341.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Earn Trading Rewards",
+    "description": "If you provide liquidity, you will earn money each time someone trades.",
+    "image": {
+      "url": "images/features/noun_3d modeling_1885342.svg",
+      "width": 80,
+      "height": 80
+    }
+  },
+  {
+    "title": "Built in Rust",
+    "description": "Serai is built in Rust.",
+    "image": {
+      "url": "images/features/noun_3d modeling_1885342.svg",
+      "width": 80,
+      "height": 80
+    }
+  }
+]
