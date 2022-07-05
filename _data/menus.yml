@@ -7,3 +7,5 @@ main:
     weight: 3
 
 footer:
+  - name: "Terms and Conditions"
+    url: "/terms/"
