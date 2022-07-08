@@ -1,11 +1,3 @@
 main:
-  - name: "About"
-    url: "/about/"
-    weight: 2
-  - name: "Contact"
-    url: "/contact/"
-    weight: 3
 
 footer:
-  - name: "Terms and Conditions"
-    url: "/terms/"
