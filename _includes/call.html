@@ -12,14 +12,14 @@
     {% endif %}
     {% if site.data.contact.discord %}
     <div class="call-email"><strong>Join our Discord!</strong>
-      <a href="https://discord.gg{{ .site.data.contact.discord }}">
+      <a href="https://discord.gg/{{ .site.data.contact.discord }}">
       </a>
     </div>
     {% endif %}
   </div>
     {% if include.show_button %}
       <div class="call-box-bottom">
-        <a href="https://discord.gg{{ .site.data.contact.discord }}" class="button">Join</a>
+        <a href="https://discord.gg/{{ .site.data.contact.discord }}" class="button">Join</a>
       </div>
     {% endif %}
 </div>
