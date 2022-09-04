@@ -13,5 +13,10 @@
     "name": "Discord",
     "link": "https://discord.gg/mpEUtJR3vz",
     "image": "images/social/discord.svg"
+  },
+  {
+    "name": "Matrix",
+    "link": "https://matrix.to/#/#serai:matrix.org",
+    "image": "images/social/matrix.svg"
   }
 ]
