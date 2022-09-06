@@ -1,4 +1,4 @@
-.call {
+.community-box {
   position: relative;
   overflow: hidden;
   background-color: $white-offset;
@@ -15,13 +15,13 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .call-box-top {
+  .community-box-top {
     flex: 1 0 auto;
     padding: 20px;
     @include media-breakpoint-up(md) {
     }
   }
-  .call-box-bottom {
+  .community-box-bottom {
     flex: auto;
     padding: 20px;
     border-top: 1px solid darken($white-offset, 5%);
@@ -30,14 +30,7 @@
       border: none;
     }
   }
-  .call-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-  .call-phone {
-    margin-bottom: 5px;
-  }
-  .call-email {
+  .community-box-text {
     a {
       color: $black;
     }
