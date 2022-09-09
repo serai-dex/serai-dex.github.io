@@ -1,3 +1,7 @@
+.community {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .community-box {
   position: relative;
   overflow: hidden;
@@ -10,19 +14,22 @@
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 2;
+  margin: 10px;
   @include media-breakpoint-up(sm) {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    flex: content;
   }
   .community-box-top {
     flex: 1 0 auto;
     padding: 20px;
+    min-width: 12em;
     @include media-breakpoint-up(md) {
     }
   }
   .community-box-bottom {
-    flex: auto;
+    flex: 0 0 auto;
     padding: 20px;
     border-top: 1px solid darken($white-offset, 5%);
     @include media-breakpoint-up(sm) {
