@@ -21,20 +21,19 @@
     flex-wrap: wrap;
     flex: content;
   }
+  @media screen and (max-width: 22em) {
+    flex-direction: column;
+  }
   .community-box-top {
     flex: 1 0 auto;
     padding: 20px;
-    min-width: 12em;
-    @include media-breakpoint-up(md) {
-    }
+    min-width: 11em;
   }
   .community-box-bottom {
     flex: 0 0 auto;
     padding: 20px;
-    border-top: 1px solid darken($white-offset, 5%);
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 auto;
-      border: none;
+    @media screen and (max-width: 22em) {
+      padding-top: 0px;
     }
   }
   .community-box-text {
