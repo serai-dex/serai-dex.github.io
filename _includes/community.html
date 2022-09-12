@@ -1,0 +1,28 @@
+<div class="row justify-content-start community">
+ {% if site.data.contact.discord %}
+ <div class="community-box">
+   <div class="community-box-top">
+     <div class="community-box-text"><strong>Join our Discord!</strong>
+     </div>
+   </div>
+     {% if include.show_button %}
+       <div class="community-box-bottom">
+         <a href="{{ site.data.contact.discord }}" class="button">Join</a>
+       </div>
+     {% endif %}
+ </div>
+ {% endif %}
+ {% if site.data.contact.matrix %}
+ <div class="community-box">
+   <div class="community-box-top">
+     <div class="community-box-text"><strong>Join our Matrix!</strong>
+     </div>
+   </div>
+     {% if include.show_button %}
+       <div class="community-box-bottom">
+         <a href="{{ site.data.contact.matrix }}" class="button">Join</a>
+       </div>
+     {% endif %}
+ </div>
+ {% endif %}
+</div>

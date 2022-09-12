@@ -1,4 +1,8 @@
-.call {
+.community {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.community-box {
   position: relative;
   overflow: hidden;
   background-color: $white-offset;
@@ -10,34 +14,29 @@
   flex-direction: row;
   flex-wrap: wrap;
   z-index: 2;
+  margin: 10px;
   @include media-breakpoint-up(sm) {
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    flex: content;
   }
-  .call-box-top {
+  @media screen and (max-width: 22em) {
+    flex-direction: column;
+  }
+  .community-box-top {
     flex: 1 0 auto;
     padding: 20px;
-    @include media-breakpoint-up(md) {
-    }
+    min-width: 11em;
   }
-  .call-box-bottom {
-    flex: auto;
+  .community-box-bottom {
+    flex: 0 0 auto;
     padding: 20px;
-    border-top: 1px solid darken($white-offset, 5%);
-    @include media-breakpoint-up(sm) {
-      flex: 0 0 auto;
-      border: none;
+    @media screen and (max-width: 22em) {
+      padding-top: 0px;
     }
   }
-  .call-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-  .call-phone {
-    margin-bottom: 5px;
-  }
-  .call-email {
+  .community-box-text {
     a {
       color: $black;
     }
