@@ -1,12 +1,65 @@
-<div class='header'>
-  <div class="container">
-    <div class="logo">
-      <a href="{{ site.baseurl }}"><img width="{{ site.logo.desktop_width }}" height="{{ site.logo.desktop_height }}" alt="{{ site.title }}" src="{{ site.logo.desktop | relative_url }}" /></a>
-    </div>
-    <div class="logo-mobile">
-      <a href="{{ site.baseurl }}"><img width="{{ site.logo.mobile_width }}" height="{{ site.logo.mobile_height }}" alt="{{ site.title }}" src="{{ site.logo.mobile | relative_url }}" /></a>
-    </div>
-    {% include main-menu.html %}
-    {% include hamburger.html %}
-  </div>
-</div>
+<header>
+      <div class="container">
+               <nav class="row" role='navigation'>
+                   <div class="logo col">
+                        <a href="{{ site.baseurl }}/index.html" aria-label="Serai DEX">
+                            <img src="/img/serai-dex-logo-full-color.png" alt="Serai DEX logo">
+                       </a>
+                   </div>
+                   <ul class="main-menu col">
+                       <li class="nav-item link"><a href="https://github.com/serai-dex/serai">GitHub</a></li>
+                       <li class="nav-item link"><a href="{{ site.baseurl }}/blog/index.html">Blog</a></li>
+                       <li class="nav-item nav-btn"><a href="#">Socials</a>
+                            <ul class="dropdown" aria-label="submenu">
+                                <li><a class="sub-nav-item" href="https://discord.gg/mpEUtJR3vz" target="_blank">
+                                    <img src="/img/social-icons/discord-logo-blue.png" alt="Discord icon logo">
+                                    <span>Discord</span></a>
+                                </li>
+                                <li><a class="sub-nav-item" href="https://matrix.to/#/#serai:matrix.org" target="_blank">
+                                    <img src="/img/social-icons/matrix-logo-blue.png" alt="Matrix icon logo">
+                                    <span>Matrix</span></a>
+                                </li>
+                                <li><a class="sub-nav-item" href="https://twitter.com/SeraiDEX" target="_blank">
+                                    <img src="/img/social-icons/twitter-logo-blue.png" alt="X (Twitter) icon logo">
+                                    <span>X (Twitter)</span></a>
+                                </li>
+
+                            </ul>
+                        </li>
+                   </ul>
+               </nav>
+               <nav role='navigation' class="mobile-menu row">
+                  <a class="logo-mobile col" href="{{ site.baseurl }}/index.html" aria-label="Serai DEX"><img src="/img/serai-dex-logo-full-color.png" alt="Serai DEX logo"></a>
+                  <input class="burger-check" id="mobile-burger" type="checkbox">
+                  <label for="mobile-burger" class="hamburger hamburger--spring">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                  </label>
+                  <ul class="slide-nav">
+                      <li class="mob-item"><a href="https://github.com/serai-dex/serai">GitHub</a></li>
+                      <li class="mob-item"><a href="{{ site.baseurl }}/blog/index.html">Blog</a></li>
+                      <li class="mob-item">
+                        <p>Find us online</p>
+                        <ul class="nav-social-mob">
+                            <li>
+                                <a class="sub-nav-item" href="https://discord.gg/mpEUtJR3vz" target="_blank">
+                                    <img src="/img/social-icons/discord-logo-blue.png" alt="Discord icon logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-nav-item" href="https://matrix.to/#/#serai:matrix.org" target="_blank">
+                                    <img src="/img/social-icons/matrix-logo-blue.png" alt="Matrix icon logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="sub-nav-item" href="https://twitter.com/SeraiDEX" target="_blank">
+                                    <img src="/img/social-icons/twitter-logo-blue.png" alt="X (Twitter) icon logo">
+                                </a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+               </nav>
+       </div>
+   </header>

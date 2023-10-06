@@ -1,18 +1,34 @@
-<div class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="footer-inner">
-          <h2 class="footer-title">{{site.title}}</h2>
-          <ul>
-            {% for item in footermenu %}
-            <li class="{% if item.url == page.url %}active{% endif %}">
-              <a href="{{ item.url | relative_url }}">{{ item.name }}</a>
-            </li>
-            {% endfor %}
-          </ul>
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>Copyright © 2023 Serai DEX</p>
+                </div>
+                <div class="col">
+                    <div class="fsocial">
+                        <ul>
+                            <li>
+                                <a href="https://github.com/serai-dex/serai" target="_blank">
+                                    <img src="/img/social-icons/github-logo-white.png" alt="Github icon logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://discord.gg/mpEUtJR3vz" target="_blank">
+                                    <img src="/img/social-icons/discord-logo-white.png" alt="Discord icon logo">
+                                </a>
+                            </li>
+                            <li><a href="https://matrix.to/#/#serai:matrix.org" target="_blank">
+                                <img src="/img/social-icons/matrix-logo-white.png" alt="Matrix icon logo">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/SeraiDEX" target="_blank">
+                                    <img src="/img/social-icons/twitter-logo-white.png" alt="X (Twitter) icon logo">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
+</footer>

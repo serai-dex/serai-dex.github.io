@@ -1,1 +1,0 @@
-# Serai Placeholder Website

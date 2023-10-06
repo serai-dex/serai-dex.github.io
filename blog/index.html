@@ -1,0 +1,72 @@
+---
+layout: base
+title: Serai DEX Blog
+---
+
+    <section class="page-intro section blog-intro">
+        <div class="container">
+          <div class="row">
+              <div class="col title">
+                  <h1>Serai DEX</h1>
+              </div>
+              <div class="col subtitle">
+                <p>Find our latest news, updates, and announcements here in our blog.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+      <section class="blog-section">
+         <div class="container">
+            <div class="row">
+
+             {% for post in paginator.posts %}
+
+                  <a href="{{ site.baseurl }}{{ post.url }}" class="col post-section post-link">
+                        <div>
+                            {%if post.img%}
+                            <img src="{{post.img}}" alt="{{post.alt}}">
+                            {%endif%}
+                            <p class="post-date">{{post.date | date: '%B %d, %Y'}}</p>
+                            <h2>{{ post.title }}</h2>
+                            <p class="post-summary">{{ post.summary }}</p>
+                        </div>
+                    </a>
+
+              {% endfor %}
+
+            </div>
+          </div>
+      </section>
+
+      <section class="blog-section">
+          <div class="container">
+             <div class="pagination">
+              {% if paginator.total_pages > 1 %}
+                <div class="text-center page-numbers"><p>
+                  {% if paginator.previous_page %}
+                    <a href="{{ site.baseurl }}{{ paginator.previous_page_path}}" class="btn-secondary">Prev</a>
+                  {% endif %}
+
+                  {% for page in (1..paginator.total_pages) %}
+                   {% assign total = paginator.total_pages %}
+
+
+                    {% if page == paginator.page %}
+                       {{ page }} of {{total}}
+
+
+
+                    {% endif %}
+                  {% endfor %}
+
+                  {% if paginator.next_page %}
+                    <a href="{{ site.baseurl }}{{ paginator.next_page_path}}" class="btn-secondary">Next</a>
+                  {% endif %}
+                </p></div>
+                {% endif %}
+              </div>
+          </div>
+      </section>
+
+      <section class="empty" style="padding-top: 20rem;"></section>
