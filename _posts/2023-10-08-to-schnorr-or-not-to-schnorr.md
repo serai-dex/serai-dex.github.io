@@ -1,0 +1,30 @@
+---
+layout: post
+title: "To Schnorr or Not to Schnorr"
+---
+
+Schnorr signatures, a digital signature algorithm published by Schnorr in 1991, are notable for their simplicity and rigorously proven security. Unfortunately, they were patented until the patent expired in 2008. To avoid paying royalties over intellectual property, ECDSA was designed with complexities which avoid conflicting with Schnorr's patent. It was standardized by the National Institute of Standards and Technology (NIST, part of the government of the USA) and achieved widespread adoption over internet infrastructure, eventually being used by both Bitcoin and Ethereum.
+
+ECDSA's complexities made it [almost impossible to prove the security of the scheme](https://crypto.stackexchange.com/a/71031). [A recent paper](https://eprint.iacr.org/2023/914) concludes in its abstract:
+
+> As a consequence, a meaningful security proof for ECDSA is unlikely to exist without strong idealization.
+
+In practice, while we may not be able to formally argue ECDSA's security, we have not practically broken it. These comments exist to show ECDSA's awkwardness and difficulty modeling, a difficulty which creates further complications down the road.
+
+Serai could use ECDSA signatures, enabling taking advantage of networks which natively support ECDSA. To do so, we'd need a _threshold ECDSA protocol_, enabling certain validators to go offline yet for Serai to continue functioning. These protocols are leagues more complex than threshold Schnorr protocols due to their being forced to deal with the ECDSA-specific complexities. They also are more difficult to prove secure due to not only being more complex themselves, but also due to extending a protocol itself without clean security proofs. This is to say nothing about their track record.
+
+The most famous works descend from Gennaro and Goldfeder, being [GG18](https://eprint.iacr.org/2019/114), [GG20](https://eprint.iacr.org/2020/540), and joining forces with Canetti, Makriyannis, and Peled, [CGGMP21](https://eprint.iacr.org/2021/060). GG18 and GG20 were notably broken in 2021 by the publication of [Alpha-Rays](https://eprint.iacr.org/2021/1621). Recently, [Makriyannis and Yomtov published four new attacks on threshold ECDSA](https://eprint.iacr.org/2023/1234), two for GG18/GG20, one for [Lindell's 2017 work](https://eprint.iacr.org/2017/552), and one for a custom protocol. Please note all of these rely on the Paillier cryptosystem, distinct from the elliptic curves ECDSA actually operates over, to achieve their goals.
+
+Implementations of threshold ECDSA have also had several issues in practice, even if the protocols can be assumed theoretically sound. [Verichains' TSShock](https://www.verichains.io/tsshock/) demonstrated several implementations had vulnerabilities in practice. While this could be the teams responsible for these implementations being inexperienced, and any audits performed being incomplete, it also serves as commentary on the difficulty in successfully implementing threshold ECDSA *especially since successful implementations of protocols still break when the protocols do*.
+
+If necessary, Serai could review CGGMP21 and/or protocols which aren't based on the Paillier cryptosystem. They should be sufficiently performant (though still multiple orders of magnitude less efficient than a Schnorr-based protocol), and ideally the protocols that don't use a distinct cryptosystem to add functionality to ECDSA avoid most potential issues (all above theoretic exploits took advantage of the Paillier side of things). The sole question becomes if the benefit outweighs the attack surface and effort required.
+
+By comparison, the most famous protocols for Schnorr multisignatures are [MuSig](https://eprint.iacr.org/2018/068), [MuSig-DN](https://eprint.iacr.org/2020/1057), [MuSig2](https://eprint.iacr.org/2020/1261), and [FROST](https://eprint.iacr.org/2020/852). The MuSig family of protocols are not threshold multisignature schemes, requiring all signers to work together to produce every signature. [MuSig was proven insecure when run in parallel](https://eprint.iacr.org/2018/417), leading to its successors. MuSig-DN and MuSig2 have been proven secure however, and while a fault in the proofs could surface, they have industry confidence.
+
+FROST, which is a threshold multisignature scheme, _and the scheme Serai uses,_ builds off the techniques of MuSig2 to provide a highly efficient threshold multisig. Not only did its own paper prove its security, it's had its security [continuously](https://eprint.iacr.org/2021/1375) [further](https://crypto.iacr.org/2022/papers/538806_1_En_18_Chapter_OnlinePDF.pdf) [proven](https://eprint.iacr.org/2022/833). Due to its performance, use-cases, and security, the Internet Research Task Force (IRTF) has [drafted it for standardization](https://datatracker.ietf.org/doc/draft-irtf-cfrg-frost/).
+
+With [EdDSA](https://datatracker.ietf.org/doc/html/rfc8032), a frequent choice among newer cryptocurrencies, being Schnorr-based, [Bitcoin adding support for Schnorr signatures with its Taproot upgrade](https://github.com/bitcoin/bips/blob/master/bip-0340.mediawiki), and Ethereum supporting Schnorr signatures via its smart contracts, Schnorr signatures are now widespread and well supported.
+
+Serai took the IRTF draft and produced [modular-frost](https://github.com/serai-dex/serai/tree/develop/crypto/frost), our extremely flexible implementation of FROST. We had this audited, along with the rest of our cryptography which we plan to use, all the way back in March 2023. We successfully applied it to all the networks that we plan to launch with and have even had it acknowledged by multiple other parties looking to utilize FROST for their own purposes.
+
+With FROST, we have a protocol we can be confident in. With our implementation, we have a highly efficient signature scheme we can apply to any network we want, which supports Schnorr. With our audit, we've worked to ensure our implementation is properly secure.
