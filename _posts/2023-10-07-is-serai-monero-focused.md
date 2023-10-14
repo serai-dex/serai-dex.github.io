@@ -39,8 +39,16 @@ Correct. There is no Monero-specific code outside of its integration file &#40;a
 
 3) Our own software stack being incredibly robust and versatile
 
-## Why not launch earlier with Bitcoin and Ethereum, later adding Monero, since it took so long?
+## Why didn't Serai launch earlier with just Bitcoin and Ethereum then?
+
+All of this work on Monero took several months. If we aren't Monero-focused, how can we justify delaying all of Serai for so long in order to launch with it?
 
 Integrating Monero prior to launch has actually been amazing for us. Only due to facing Monero's complexities did we properly define, and revisit, assumptions we place on external networks in order to successfully integrate with them. By ensuring we can support Monero prior to launch, we've ensured and rigorously demonstrated our software stack can face whatever challenge we may line up in the future.
 
-There also wouldn't be notable appeal to Serai if we solely launched with Bitcoin and Ethereum. There's multiple protocols which already offer Bitcoin-Ethereum swaps. By also including Monero, we provide a unique offering and demonstrate our technical competency. We aren't here to be the 20th bridge between Ethereum and all the forks of Ethereum. We are here to connect networks, regardless of their unique challenges, and provide a quality cross-chain decentralized exchange.
+There also wouldn't be notable appeal to Serai if we solely launched with Bitcoin and Ethereum. There's multiple protocols which already offer Bitcoin-Ethereum swaps. By also including Monero, we provide a unique offering and demonstrate our technical competency. We aren't here to be the 20th bridge between Ethereum and all the forks of Ethereum. We are here to connect networks, regardless of their specific challenges, and provide a quality cross-chain decentralized exchange.
+
+We could have launched with a distinct network, one largely unserviced by DEXs, in order to establish our unique offering. We chose Monero, despite the amount of time and effort it would be, due to its importance. In a modern day society which is increasingly digital and increasingly less private, Monero fights to re-establish privacy for your payments. We believe in that mission and want to enable everyone to have access to personal privacy.
+
+## So what does all this mean?
+
+Largely nothing. If you're interested in Serai for its integration of Monero, Serai will still do its best to integrate Monero. Serai will also do its best to integrate Bitcoin and Ethereum, the other networks its launching with, as part of its responsibility to be the best DEX it can be. This post isn't intended to disregard Monero, yet instead to highlight how Serai is a freestanding project with its own goals and responsibilities. With that comes responsibilities to Monero, yet none unique to Monero. Instead, they're the same responsibilities given to all integrated networks.
