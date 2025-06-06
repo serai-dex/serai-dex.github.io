@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Ethereum Router Audited by Trail of Bits"
+title: "Ethereum Contracts Audited by Trail of Bits"
 ---
 
 In December 2024, Serai requested Trail of Bits audit our Ethereum contracts. This included our Schnorr signature contract, to verify signatures from the Serai validators, our router contract, to handle coins in to and out from Serai, and associated Rust libraries for interacting with these contracts. Also included was our logic for interpreting ERC20s transfers to Serai, without first requiring an approval transaction.
