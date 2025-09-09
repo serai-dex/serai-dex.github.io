@@ -52,7 +52,7 @@ underlying FCMPs, is expected to be
 
 By the generosity of [Power Up Privacy](https://powerupprivacy.com/), we are
 also able to announce a [$100,000 bug bounty for monero-oxide](
-  https://immunefi.org/bug-bounty/monero-oxide
+  https://immunefi.com/bug-bounty/monero-oxide
 ). Payouts will be in XMR and entirely handled by Power Up Privacy. We offer
 this to prioritize our implementation's security and accuracy, welcoming
 security researchers to take a look. Our codebase includes Rust code,
