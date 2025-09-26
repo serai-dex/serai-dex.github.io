@@ -61,8 +61,8 @@ We also have
 [implemented our protocol in Rust](
   https://github.com/serai-dex/serai/tree/next/crypto/dkg/evrf
 ), published under the MIT license. While our implementation has yet to be
-audited, it builds upon the `generalized-bulletproofs`,
-`generalized-bulletproofs-ec-gadgets` libraries for Bulletproofs and efficient
+audited, it builds upon the generalized-bulletproofs,
+generalized-bulletproofs-ec-gadgets libraries for Bulletproofs and efficient
 elliptic curve cryptography within them. These were audited by the Monero
 project for usage within their upcoming FCMP++ hard fork. This provides a
 strong base for them, helping ensure its foundation.
