@@ -13,7 +13,7 @@ to use. PedPoP does not allow identifying a participant who misbehaves however,
 so Serai implemented a 'complaint round' into our protocol. After PedPoP
 completes on paper, each participant sends a message to say either "I'm good!"
 or "Eve sent me an invalid key!", allowing us to detect invalid participants.
-Our implementation was initially written independently yet was effective the
+Our implementation was initially written independently yet was effectively the
 protocol from the [ICE FROST paper](https://eprint.iacr.org/2021/1658).
 
 Unfortunately, our DKG protocol still faced an issue: everyone must be online
