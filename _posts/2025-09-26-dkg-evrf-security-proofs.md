@@ -45,7 +45,7 @@ While there are prior works on combining DKGs with Verifiable Encryption for
 these results, they generally require non-elliptic-curve cryptography or
 repetition (instead of encrypting a 256-bit key share in one message,
 encrypting each bit of a key share in 256 messages, each requiring their own
-proof of validity). Our methodology is notably for only requiring
+proof of validity). Our methodology is notable for only requiring
 elliptic-curve cryptography (the hardness of the Decisional Diffie-Hellman
 problem) and supporting encrypting entire key shares in a single message.
 
