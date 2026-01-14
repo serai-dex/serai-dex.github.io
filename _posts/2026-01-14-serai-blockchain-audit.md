@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Serai DEX's Blockchain's Audit Kicks Off'"
+title: "Serai DEX's Blockchain's Audit Kicks Off"
 ---
 
 Serai is a cross-chain decentralized exchange with many different components to
@@ -14,8 +14,8 @@ it. In the past, we've:
     https://serai.exchange/2025/09/26/dkg-evrf-security-proofs.html
   ) with security proofs written by [HashCloak](https://hashcloak.com/).
 - Started what has been spun off into
-  [`monero-oxide`](https://serai.exchange/2025/09/09/monero-serai-oxide.html),
-  a Rust implementation of the Monero transaction protocol and wallet
+  [monero-oxide](https://serai.exchange/2025/09/09/monero-serai-oxide.html), a
+  Rust implementation of the Monero transaction protocol and wallet
   functionality, audited by [Cypher Stack](https://cypherstack.com) in 2025.
   This included a formal description, and proof of security, for our Monero
   threshold signing protocol, [FROSTLASS](
@@ -32,7 +32,7 @@ it. In the past, we've:
   [audited by Trail of Bits](
     https://serai.exchange/2025/06/06/ethereum-contracts-audited-by-tob.html
   ).
-- Had our [`bitcoin-serai` library audited by Cypher Stack](
+- Had our [bitcoin-serai library audited by Cypher Stack](
     https://github.com/serai-dex/serai/blob/7d2d739042784466e855e6e3e75cbf0e898b80ff/audits/Cypher%20Stack%20networks%20bitcoin%20August%202023
   ).
 
