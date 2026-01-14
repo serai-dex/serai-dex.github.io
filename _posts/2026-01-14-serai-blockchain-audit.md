@@ -36,13 +36,13 @@ it. In the past, we've:
     https://github.com/serai-dex/serai/blob/7d2d739042784466e855e6e3e75cbf0e898b80ff/audits/Cypher%20Stack%20networks%20bitcoin%20August%202023
   ).
 
-While these topics are about Serai interacts with external networks, be they
-Bitcoin, Ethereum, or Monero, there is also the Serai network itself (or even
-networks, depending on where one draws the lines). Fundamentally, Serai uses a
-blockchain to select validators and order swaps, one built upon the Substrate
-framework. The Substrate framework was chosen for being written in Rust,
-being incredibly flexible, intending to allow developers to build their own
-blockchains, as well as performant. While this meant Serai did not have to
+While these topics are about how Serai interacts with external networks, be
+they Bitcoin, Ethereum, or Monero, there is also the Serai network itself (or
+even networks, depending on where one draws the lines). Fundamentally, Serai
+uses a blockchain to select validators and order swaps, one built upon the
+Substrate framework. The Substrate framework was chosen for being written in
+Rust, being incredibly flexible, intending to allow developers to build their
+own blockchains, as well as performant. While this meant we did not have to
 write a blockchain node implementation from scratch for Serai's blockchain,
 which would've been unnecessary and out-of-scope to the Serai project, we did
 still have to define and implement the protocol for our specific needs and
@@ -50,7 +50,7 @@ functionality.
 
 As of Monday, the audit of our Substrate-based blockchain kicked off, with
 [SRLabs](https://srlabs.de/) as our auditor. SRLabs has a long history within
-the Substrate ecosystem, giving them unmatched experience. They've prior
+the Substrate ecosystem, giving them unmatched experience. They've previously
 developed [tooling to secure the Substrate ecosystem](
   https://github.com/srlabs/substrate-runtime-fuzzer
 ), with extensive usage over several projects, and maintain a security
@@ -74,10 +74,10 @@ way to donate to Monero development (along with the
 [MAGIC Privacy Guides Fund](https://magicgrants.org/funds/privacy_guides)).
 
 The funds for the audit were generously donated by
-[Power Up Privacy](https://powerupprivacy.com), a charitable entity which
-donates to projects which benefit privacy. They've prior donated to Serai to
-enable the security proofs for its bespoke Distributed Key Generation protocol
-and the audit of its Ethereum contracts.
+[Power Up Privacy](https://powerupprivacy.com), a charitable entity that
+donates to projects which benefit privacy. They've previously donated to Serai
+to enable the security proofs for its bespoke Distributed Key Generation
+protocol and the audit of its Ethereum contracts.
 
 We are incredibly thankful to both organizations for enabling us to do our best
 to ensure the security of the Serai project, which is moving into a final       
