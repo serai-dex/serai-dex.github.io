@@ -22,7 +22,7 @@ Despite being built with Substrate, Serai has no direct relation to Polkadot and
 is its own network entirely. As our use of a blockchain is an implementation
 detail of Serai, the usage of Substrate is also considered an implementation
 detail of the blockchain. To this end, we've worked extensively to define our
-own [ABI](github.com/serai-dex/serai/tree/next/substrate/abi) and JSON-RPC API,
+own [ABI](https://github.com/serai-dex/serai/tree/next/substrate/abi) and JSON-RPC API,
 ensuring we define the protocol fundamentally used for the lifetime of the
 project and have control over the entire experience, from developers to users.
 One notable feature to this end has been our own transaction format, allowing
