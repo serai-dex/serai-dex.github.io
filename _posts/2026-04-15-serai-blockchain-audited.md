@@ -65,7 +65,7 @@ determined to always be vigilant accordingly. All following uses of these
 labels for classifying severity will be as assigned within the audit.
 
 We would like to thank [MAGIC Grants](https://magicgrants.org) for helping to
-facilitate the audit and Power Up Privacy for their donation which funded it.
+facilitate the audit and Power Up Privacy for their donation which funded it. For MAGIC's insight, please read their own [blog post](https://magicgrants.org/2026/04/15/SRLabs-Serai-Substrate-Audit).
 
 ### Mitigation Status
 
