@@ -17,3 +17,8 @@ plugins:
 
 paginate: 6
 paginate_path: "/blog/page:num/"
+
+collections:
+  docs:
+    output: true
+    permalink: /documentation/:name/
