@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <main>
+        {% include header.html %}
+        
+        <section class="blog-section">
+         <div class="container post-wrap">
+              <div class="row">
+                  <div class="col post-page">
+                     {% if page.img %}
+                         <img src="{{ page.img }}" alt="{{ page.alt }}">
+                     {% endif %}
+                     <h1>{{ page.title }}</h1>
+                     <div class="post-body">
+                          {{ content }}
+                     </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+    {% include footer.html %}
+    </main>
+  </body>
+</html>
