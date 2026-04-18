@@ -1,0 +1,44 @@
+---
+layout: base
+title: Serai DEX Documentation
+permalink: /documentation/
+---
+
+<section class="page-intro section docs-intro">
+    <div class="container">
+      <div class="row">
+          <div class="col title">
+              <h1>Documentation</h1>
+          </div>
+          <div class="col subtitle">
+            <p>Explore documentation on the various systems and functionality of Serai.</p>
+          </div>
+      </div>
+    </div>
+</section>
+
+<section class="docs-section">
+   <div class="container">
+      <div class="row">
+
+        {% assign docs = site.docs | sort: "order" %}
+
+        {% for doc in docs %}
+          <a href="{{ site.baseurl }}{{ doc.url }}" class="col post-section post-link">
+            <div>
+              {% if doc.img %}
+                <img src="{{ doc.img }}" alt="{{ doc.alt }}">
+              {% endif %}
+              <h2>{{ doc.title }}</h2>
+              {% if doc.summary %}
+                <p class="post-summary">{{ doc.summary }}</p>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+
+      </div>
+    </div>
+</section>
+
+<section class="empty" style="padding-top: 20rem;"></section>
