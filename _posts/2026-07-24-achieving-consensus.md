@@ -5,7 +5,7 @@ title: "Achieving Consensus"
 
 Serai attempts to maintain its security even under asynchrony, a state where an
 adversary decides when messages are received and in what order. This means the
-avdersary may publish a hundred blocks onto the Serai network, with no activity
+adversary may publish a hundred blocks onto the Serai network, with no activity
 on any other networks, or may publish thousands of events onto other networks
 while the Serai network makes no progress. No matter what occurs, and when it
 occurs, it is the responsibility of Serai's validators to agree on a canonical
@@ -13,7 +13,7 @@ timeline.
 
 In order to not burden the Serai blockchain, only the results of our consensus
 protocols are published on-chain. The process of achieving consensus over the
-order of events is handle entirely off-chain. This not only minimizes the Serai
+order of events is handled entirely off-chain. This not only minimizes the Serai
 blockchain's storage requirements but is a key reason why the Serai network may
 so efficiently handle external networks: each external network has its own
 dedicated consensus protocol with only the relevant validators participating.
